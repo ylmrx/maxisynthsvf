@@ -51,10 +51,6 @@ then type
 
 and copy `maxisynth/maxisynth.drmlgunit` to your drumlogue.
 
-The `maxisynth` repo has three branches:
+## Upstream project
 
-* `main` : a complete synthesizer unit with one oscillator, one low-pass filter, one envelope generator, and  12 parameters
-
-* `band-limited-osc` : a minimum synthesizer unit with one sawtooth oscillator and Note parameter
-
-* `maximilian-synth-template` : a modified version of `dummy-synth` as a starting point to develop a new synth unit with Maximilian
+<https://github.com/boochow/maxisynth>

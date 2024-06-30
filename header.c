@@ -28,7 +28,7 @@ const __unit_header unit_header_t unit_header = {
         // Page 1
         {0, 127, 60, 60, k_unit_param_type_midi_note, 0, 0, 0, {"Note"}},
         {0, 2, 0, 0, k_unit_param_type_strings, 0, 0, 0, {"Wave"}},
-        {0, 1270, 0, 1270, k_unit_param_type_none, 1, 1, 0, {"Cutoff"}},
+        {0, 100, 0, 100, k_unit_param_type_percent, 0, 0, 0, {"Cutoff"}},
         {-128, 128, 0, -16, k_unit_param_type_none, 5, 0, 0, {"Reso"}},
 
         // Page 2

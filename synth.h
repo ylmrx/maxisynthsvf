@@ -212,7 +212,7 @@ class Synth {
       }
       break;
     case Cutoff:
-      cutoffOffset_ = 0.1 * value - 63.5; // -63.5 .. +63.5
+      cutoffOffset_ = 1.27f * value - 63.5; // -63.5 .. +63.5
       break;
     case Resonance:
       resonance_ = powf(2, 1.f / (1<<5) * value); // 2^(-4) .. 2^4
@@ -317,12 +317,14 @@ class Synth {
         } else {
           return nullptr;
         }
+        break;
       case Waveform2:
         if (value < 3) {
           return WaveformStr[value];
         } else {
           return nullptr;
         }
+        break;
       case Waveform:
         if (value < 3) {
           return WaveformStr[value];

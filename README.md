@@ -13,6 +13,8 @@ This forks boochow' excellent work from maxisynth
 - Switch the biquad filter to the SVF filter
 - The SVF can be set to bandpass/highpass/lowpass/notch/custom
 - The `custom` filter mode let you set a mix of the four filters states
+- Releases uses an exponential scale, it can go from 1ms to a dozen seconds
+- Longer attacks and decays
 
 ## Notes
 

@@ -144,7 +144,6 @@ class Synth {
       float cutoff = min(23999., note2freq(max(0., cutoff_note)));
       filter_.setCutoff(cutoff);
       filter_.setResonance(resonance_);
-
       sig = filter_.play(sig * amp_, mxLp_, mxBp_, mxHp_, mxNt_);
       // Amplifier
       sig = sig * ampEnv;
@@ -242,7 +241,7 @@ class Synth {
       envelope_.setSustain(0.01 * value);
       break;
     case Release:
-      envelope_.setRelease(value + 1);
+      envelope_.setRelease(exp(2.0f * (value / 20.f - 1.f)) * 0.001f + 1.f);
       break;
     case AmpAttack:
       ampEnvelope_.setAttackMS(value + 1);
@@ -254,7 +253,7 @@ class Synth {
       ampEnvelope_.setSustain(0.01 * value);
       break;
     case AmpRelease:
-      ampEnvelope_.setRelease(value + 1);
+      ampEnvelope_.setRelease(exp(2.0f * (value / 20.f - 1.f)) * 0.001f + 1.f);
       break;
 #endif
     case EnvPitchInt:
@@ -331,6 +330,7 @@ class Synth {
         } else {
           return nullptr;
         }
+        break;
       // Note: String memory must be accessible even after function returned.
       //       It can be assumed that caller will have copied or used the string
       //       before the next call to getParameterStrValue
@@ -412,7 +412,6 @@ class Synth {
   int32_t p_[24];
   maxiPolyBLEP osc1_;
   maxiPolyBLEP osc2_;
-  // maxiBiquad filter_;
   maxiSVF filter_;
 #ifdef USE_MAXIENVGEN
   maxiEnvGen envelope_;

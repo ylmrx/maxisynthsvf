@@ -29,13 +29,13 @@ const __unit_header unit_header_t unit_header = {
         {0, 127, 60, 60, k_unit_param_type_midi_note, 0, 0, 0, {"Note"}},
         {0, 2, 0, 0, k_unit_param_type_strings, 0, 0, 0, {"Wave"}},
         {0, 100, 0, 100, k_unit_param_type_percent, 0, 0, 0, {"Cutoff"}},
-        {-128, 128, 0, -16, k_unit_param_type_none, 5, 0, 0, {"Reso"}},
+        {-128, 128, 0, 16, k_unit_param_type_none, 5, 0, 0, {"Reso"}},
 
         // Page 2
-        {0, 1000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"Attack"}},
-        {0, 1000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"Decay"}},
+        {0, 2000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"Attack"}},
+        {0, 2000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"Decay"}},
         {0, 100, 0, 100, k_unit_param_type_percent, 0, 0, 0, {"Sustain"}},
-        {0, 1000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"Release"}},
+        {0, 200, 0, 0, k_unit_param_type_percent, 1, 0, 0, {"Release"}},
 
         // Page 3
         {0, 4, 0, 0, k_unit_param_type_strings, 0, 0, 0, {"Filter"}},
@@ -44,10 +44,10 @@ const __unit_header unit_header_t unit_header = {
         {0, 100, 0, 0, k_unit_param_type_percent, 0, 0, 0, {">PWM"}},
 
         // Page 4
-        {0, 1000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"vAttack"}},
-        {0, 1000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"vDecay"}},
+        {0, 2000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"vAttack"}},
+        {0, 2000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"vDecay"}},
         {0, 100, 0, 100, k_unit_param_type_percent, 0, 0, 0, {"vSustain"}},
-        {0, 1000, 0, 0, k_unit_param_type_msec, 0, 0, 0, {"vRelease"}},
+        {0, 200, 0, 0, k_unit_param_type_percent, 1, 0, 0, {"vRelease"}},
 
         // Page 5
         {0, 2, 0, 0, k_unit_param_type_strings, 0, 0, 0, {"OSC2"}},
